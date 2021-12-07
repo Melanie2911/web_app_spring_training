@@ -8,11 +8,11 @@ import java.util.List;
 @RestController
 public class TodoListController {
     private List<Todo> liste = new ArrayList<>();
-    @PostMapping("POST/api/todo")
+    @PostMapping("api/todo")
     public void AddList(@RequestBody Todo newTodo){
         liste.add(newTodo);
     }
-    @GetMapping("GET/api/todo")
+    @GetMapping("api/todo")
     public List<Todo> SendList() {
         return liste;
     }
